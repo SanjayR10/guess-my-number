@@ -22,7 +22,9 @@ document.querySelector(".check").addEventListener("click", function () {
   } else if (guess !== secret) {
     if (score > 1) {
       document.querySelector(".message").textContent =
-        guess > secret ? "Guess number is great!" : "Guess number is less!";
+        guess > secret
+          ? "Number you guessed is great!"
+          : "Number you guessed is less!";
       --score;
       document.querySelector(".score").textContent = score;
     } else {
